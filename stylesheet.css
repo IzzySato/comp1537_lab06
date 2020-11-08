@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+:root {
+  --menu-color: black;
+  --name-color: white;
+  --nav-background-color: white;
+  --rating-color: #FF6A6A;
+  --footer-background-color: #929292;
+  --text-color: grey;
+
+}
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  font-size: 15px;
+  position: relative;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+#mainHeader{
+  background-image: url("./images/background1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 500px;
+}
+#phoneNav{
+  display: none;
+}
+#mainNavUl{
+  background-color: var(--nav-background-color);
+  padding: 2% 0 2% 1%;
+}
+.NavLi{
+  color: var(--menu-color);
+  display: inline;
+  margin-right: 5%;
+}
+.highlightLi{
+  color: var(--text-color);
+}
+.link{
+  cursor: pointer;
+}
+#gymName{
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: var(--name-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#location{
+  color: var(--name-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+#locationText{
+  display: inline-block;
+  margin-left: 5px;
+}
+#tabs{
+  display: grid;
+  grid-template-columns: 50% auto;
+  justify-content: center;
+}
+.tab{
+  color: var(--menu-color);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 2.5em;
+}
+.tab:hover{
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--rating-color);
+}
+#facilitiesTab{
+  color: var(--text-color);
+}
+#facilitiesTab:hover{
+  color: var(--menu-color);
+}
+#reviewContainer{
+  margin: 5% 20%;
+}
+.review{
+  border: 2px solid #E6E6E6;
+  box-shadow: 0 0 10px;
+  margin-bottom: 2%;
+  padding: 3%;
+}
+.customerContainer{
+  display: grid;
+  grid-template-columns: 22% 40% auto;
+}
+.rating{
+  color: var(--rating-color);
+}
+.customerImage{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.customerName{
+  text-transform: capitalize;
+}
+.commentDate{
+  color: var(--text-color);
+  text-align: right;
+}
+.customerName, .commentDate{
+  margin-top: 10%;
+}
+footer{
+  background-color: var(--footer-background-color);
+  height: 150px;
+  padding-top: 2%;
+}
+footer ul{
+  text-align: right;
+}
+footer ul li{
+  font-size: 2em;
+  color: var(--name-color);
+  display: inline-block;
+  margin-right: 2%;
+}
+footer ul li:hover{
+  color: var(--menu-color);
+}
+@media only screen and (max-width: 1100px){
+  #mainHeader{
+    height: 400px;
+  }
+  #gymName{
+    font-size: 2.5em;
+  }
+  #reviewContainer{
+    margin: 5% 10%;
+  }
+}
+@media only screen and (max-width: 870px){
+  #mainHeader{
+    height: 300px;
+  }
+  #mainNavUl{
+    display: none;
+    margin-bottom: 8%;
+  }
+  .NavLi{
+    display: block;
+    padding-bottom: 20px;
+  }
+  #mainNav.menu-show #mainNavUl{
+    display: block;
+    padding-top: 5em;
+  }
+  #mainNav.menu-show #mainNavUl li{
+    padding-left: 1em;
+    padding-bottom: 1em;
+  }
+  #mainNav.menu-show #mainNavUl li:last-child{
+    padding-bottom: 0em;
+  }
+  #mainNav.menu-show + nav div i#hamburgerMenu{
+    color: var(--menu-color);
+  }
+  #phoneNav{
+    display: block;
+  }
+  #hamburgerMenu{
+    position: absolute;
+    font-size: 3em;
+    top: 10px;
+    left: 10px;
+    color: var(--name-color);
+  }
+  #companyName{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    color: var(--name-color);
+  }
+  #icons{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: var(--name-color);
+    font-size: 3em;
+  }
+  #gymName{
+    font-size: 2em;
+  }
+  #gymName h2{
+    margin-top: 15%;
+    margin-bottom: 0;
+  }
+  #locationText{
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 750px){
+  #gymName{
+    font-size: 1.5em;
+  }
+  #locationText{
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 510px){
+  #mainHeader{
+    height: 215px;
+  }
+}
+@media only screen and (max-width: 380px){
+  #mainHeader{
+    height: 165px;
+  }
+  #companyName{
+    left: 39%;
+  }
+  .customerContainer{
+    display: block;
+  }
+  .customerName{
+    margin: 0;
+  }
+  .commentDate{
+    margin: 0;
+  }
+  footer{
+    height: 65px;
+  }
+}
